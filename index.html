@@ -13,6 +13,7 @@
     #epa-pic{
       text-align: center;
       padding: 10px;
+      margin-top:50px;
     }
     #btn{
       text-align: center;
@@ -40,18 +41,21 @@
   </div>
   <script>
     var epapic = document.getElementById("epa-pic");
+    var epa = document.getElementById("epapic");
     var btn = document.getElementById("btn");
     var show = document.getElementById("btn-show");
     var audioplay = document.getElementById("audioplay");
     document.body.removeChild(epapic);
+    epa.style.display = "none";
 
     show.onclick = ()=>{
       document.body.appendChild(epapic);
       document.body.removeChild(btn);
       audioplay.play();
+      setTimeout(()=>{
+      epa.style.display = "inline-block";
+      },18000);
     }
-
-
 
   </script>
 </body>
