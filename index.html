@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0px auto;
+      padding: 0px auto;
+    }
+    #epa-pic{
+      text-align: center;
+      padding: 10px;
+    }
+    #btn{
+      text-align: center;
+      align-items: center;
+      margin-top: 50px;
+    }
+    #btn-show{
+      padding: 20px;
+      background-color: black;
+      color:white;
+      border-radius:5px ;
+    }
+  </style>
+</head>
+<body>
+  <div id="epa-pic">
+    <img src="epa.jpeg" id="epapic">
+    <audio controls autoplay id="audioplay">
+      <source src="Lo Ki - Kagome (Official Music Video).mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  <div id="btn">
+    <button id="btn-show">Play The Best Music</button>
+  </div>
+  <script>
+    var epapic = document.getElementById("epa-pic");
+    var btn = document.getElementById("btn");
+    var show = document.getElementById("btn-show");
+    var audioplay = document.getElementById("audioplay");
+    document.body.removeChild(epapic);
+
+    show.onclick = ()=>{
+      document.body.appendChild(epapic);
+      document.body.removeChild(btn);
+      audioplay.play();
+    }
+
+
+
+  </script>
+</body>
+</html>
